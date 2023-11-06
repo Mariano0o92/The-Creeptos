@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	overflow: scroll;
+}
+
+body {
+	position: relative;
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 1.6rem;
+	height: 100vh;
+	width: 100vw;
+    background-image: url(/dist/img/background.png);
+	background-repeat: no-repeat;
+	background-position: 0 0vh;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.header {
+	position: fixed;
+	height: 12vh;
+	width: 100vw;
+	background-image: url(/dist/img/background.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 100;
+
+	&__title {
+		padding: 20px 0 0 20px;
+		font-size: 4rem;
+		text-align: left;
+		text-transform: uppercase;
+	}
+}
+
+.coins {
+	position: absolute;
+	top: 12vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+    height: 88vh;
+
+	&__search {
+		position: fixed;
+		top: 12vh;
+		padding-bottom: 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 12vh;
+		width: 100vw;
+		align-items: center;
+		font-size: 1.2rem;
+		background-image: url(/dist/img/background.png);
+		background-repeat: no-repeat;
+		background-position: 0 0vh;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 100;
+
+		h2 {
+			padding-bottom: 10px;
+		}
+
+		input {
+			margin-top: 10px;
+			padding: 10px 20px;
+			background-color: rgba(255, 255, 255, 0.7);
+			font-size: 1.6rem;
+			font-family: inherit;
+			border: none;
+			border-radius: 20px;
+			color: #333;
+		}
+
+		input:focus {
+			outline: 2px solid rgb(69, 150, 122);
+		}
+
+		input::placeholder {
+			color: #333;
+		}
+	}
+
+	&__container {
+		position: absolute;
+		top: 12vh;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		width: 60vw;
+		height: 88vh;
+	}
+}
