@@ -17,7 +17,7 @@ body {
 	font-size: 1.6rem;
 	height: 100vh;
 	width: 100vw;
-    background-image: url(/dist/img/background.png);
+    background-image: url(/dist/img/background3.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: cover;
@@ -30,7 +30,7 @@ body {
 	position: fixed;
 	height: 12vh;
 	width: 100vw;
-	background-image: url(/dist/img/background.png);
+	background-image: url(/dist/img/background3.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: cover;
@@ -68,7 +68,7 @@ body {
 		width: 100vw;
 		align-items: center;
 		font-size: 1.2rem;
-		background-image: url(/dist/img/background.png);
+		background-image: url(/dist/img/background3.png);
 		background-repeat: no-repeat;
 		background-position: 0 0;
 		background-size: cover;
@@ -89,20 +89,22 @@ body {
 			border-radius: 20px;
 			color: #333;
 		}
-
+		
 		input:focus {
-			outline: 2px solid rgb(69, 150, 122);
+			outline: 2px solid #47B5FF;
 		}
-
+		
 		input::placeholder {
 			font-size: 1.3rem;
 			color: #333;
 		}
 	}
-
-	&__container {
+	
+	
+	&__container,
+	&__header-container {
 		position: absolute;
-		top: 12vh;
+		top: 19vh;
 		padding: 20px;
 		display: flex;
 		flex-direction: column;
@@ -113,8 +115,22 @@ body {
 		font-family: 'Ubuntu', sans-serif;
 		font-size: 2rem;
 	}
+
+	&__header-container {
+		position: fixed;
+		top: 24vh;
+		padding-bottom: 0;
+		height: 86px;
+		background-image: url(/dist/img/background3.png);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 100;
+	}
 	
-	&__row {
+	&__row,
+	&__header-row {
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr 1fr 4fr 3fr 3fr 5fr 1fr 5fr;
@@ -123,54 +139,66 @@ body {
 		align-items: center;
 		width: 80%;
 		max-width: 1200px;
-		border-bottom: 2px solid rgb(69, 150, 122);
+		border-bottom: 2px solid #47B5FF;
 		text-overflow: ellipsis;
 	}
-
+	
+	&__header-row {
+		border-bottom: none;
+	}
+	
 	&__rank {
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
 	}
-
+	
 	&__logo {
 		grid-row: 1 / 2;
 		grid-column: 2 / 3;
 		width: 24px;
 		height: 24px;
 	}
-
+	
 	&__name {
 		grid-row: 1 / 2;
 		grid-column: 3 / 4;
 		font-weight: bolder;
 		text-align: center;
 	}
-
+	
 	&__shortcut {
 		grid-row: 1 / 2;
 		grid-column: 4 / 5;
 		text-transform: uppercase;
 	}
-
-
+	
+	
 	&__price {
 		grid-row: 1 / 2;
 		grid-column: 5 / 6;
 	}
-
+	
 	&__volume {
 		grid-row: 1 / 2;
 		grid-column: 6 / 7;
 	}
-
+	
 	&__difference {
 		grid-row: 1 / 2;
 		grid-column: 7 / 8;
+		color: darkred;
+		
+		&--green {
+			color: greenyellow;
+		}
+		
+		
 	}
-
-
+	
+	
 	&__market-cap {
 		grid-row: 1 / 2;
 		grid-column: 8 / 9;
 	}
+	
 }

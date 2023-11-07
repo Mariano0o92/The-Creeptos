@@ -33,6 +33,9 @@ const createCoins = (coins) => {
         const coinRow = document.createElement('div')
         coinRow.classList.add('coins__row')
 
+        const percentageChange = coin.price_change_percentage_24h
+        const changeColorClass = percentageChange < 0 ? '' : ' coins__difference--green'
+
     coinRow.innerHTML = `
     <div class="coins__rank">${coin.market_cap_rank}</div>
     <img class="coins__logo" src="${coin.image}" alt="${coin.name}">
@@ -40,7 +43,7 @@ const createCoins = (coins) => {
         <div class="coins__shortcut">${coin.symbol}</div>
         <div class="coins__price">$${coin.current_price.toFixed(2)}</div>
         <div class="coins__volume">$${coin.total_volume.toFixed(2)}</div>
-        <div class="coins__difference">${coin.price_change_percentage_24h.toFixed(2)}%</div>
+        <div class="coins__difference${changeColorClass}">${percentageChange.toFixed(2)}%</div>
         <div class="coins__market-cap">$${coin.market_cap}</div>
     `
     coinsContainer.appendChild(coinRow)
