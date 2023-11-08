@@ -35,7 +35,7 @@ body {
 	background-position: 0 0;
 	background-size: cover;
 	background-attachment: fixed;
-	z-index: 100;
+	z-index: 1;
 
 	&__title {
 		padding: 20px 0 0 20px;
@@ -43,6 +43,25 @@ body {
 		text-align: left;
 		text-transform: uppercase;
 	}
+}
+
+.coins::before {
+	content: 'Powered by CoinGecko';
+	position: fixed;
+	bottom: 10px;
+	left: 25px;
+	margin-left: 25px;
+	padding: 10px 38px 10px 0;
+	text-align: left;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.5rem;
+	letter-spacing: 5px;
+	transform: rotate(-90deg);
+	transform-origin: left;
+	background-image: url(/dist/img/coingecko.png);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 .coins {
@@ -73,7 +92,7 @@ body {
 		background-position: 0 0;
 		background-size: cover;
 		background-attachment: fixed;
-		z-index: 100;
+		z-index: 1;
 
 		h2 {
 			padding-bottom: 10px;

@@ -42,8 +42,8 @@ const createCoins = coins => {
             <img class="coins__logo" src="${coin.image}" alt="${coin.name}">
             <div class="coins__name">${coin.name}</div>
             <div class="coins__shortcut">${coin.symbol}</div>
-            <div class="coins__price">$${coin.current_price.toFixed(2)}</div>
-        <div class="coins__volume">$${coin.total_volume.toFixed(2)}</div>
+            <div class="coins__price">$${coin.current_price}</div>
+        <div class="coins__volume">$${coin.total_volume}</div>
         <div class="coins__difference${changeColorClass}">${percentageChange.toFixed(2)}%</div>
         <div class="coins__market-cap">$${coin.market_cap}</div>
         `
