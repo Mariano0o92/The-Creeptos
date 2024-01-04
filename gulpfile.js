@@ -10,9 +10,11 @@ const imagemin = require('gulp-imagemin')
 const sourcemaps = require('gulp-sourcemaps')
 const clean = require('gulp-clean');
 const kit = require('gulp-kit');
+const env = require('gulp-env');
 const browserSync = require('browser-sync').create()
 const reload = browserSync.reload
 
+const apiKey = process.env.API_KEY;
 
 const paths = {
 	html: './html/**/*.kit',
@@ -57,7 +59,7 @@ function convertImages(done) {
 	done()
 }
 function handleKits(done) {
-	src(paths.html).pipe(kit()).pipe(dest('./'))
+	src(paths.html).pipe(kit()).pipe(dest('./')).pipe(env.set({ API_KEY: apiKey }))
 	done()
 }
 

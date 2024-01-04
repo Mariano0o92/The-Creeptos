@@ -8,14 +8,13 @@ function getCoins() {
 	const URL_API =
 		'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1?'
 	const proxyUrl = 'https://corsproxy.io/?'
-	const API_KEY = 'x_cg_demo_api_key=CG-pe75sbUCP7wgszxkqUY8PCMx'
+	const API_KEY = window.API_KEY
 
 	fetch(URL_API + API_KEY, {
 		method: 'GET',
 	})
 		.then(res => res.json())
 		.then(data => {
-			console.log(data)
 			createCoins(data)
 		})
 		.catch(err => {
