@@ -16,7 +16,6 @@ function getCoins() {
 		.then(res => res.json())
 		.then(data => {
 			createCoins(data)
-			console.log(data);
 		})
 		.catch(err => {
 			console.log(err)
