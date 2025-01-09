@@ -13,6 +13,7 @@
     "@babel/core": "^7.22.17",
     "@babel/preset-env": "^7.22.15",
     "browser-sync": "^2.29.3",
+    "cypress": "^13.7.1",
     "dotenv": "^16.3.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
